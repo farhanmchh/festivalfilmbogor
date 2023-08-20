@@ -26,7 +26,7 @@ export default function Section1() {
       <div className=" py-10 pb-20">
         <div className="flex justify-between gap-10 mb-10 relative">
           <img
-            src="/assets/membentang-02-white.svg"
+            src="/assets/membentang-02-blue.svg"
             className="absolute sm:static top-9 opacity-50 sm:opacity-100 w-40 sm:w-1/4 rotate-180 z-0"
           />
           <div className="text-center mx-auto z-10">
@@ -34,7 +34,7 @@ export default function Section1() {
             <h3 className="text-[#FEDE88]">Festival Film Bogor?</h3>
           </div>
           <img
-            src="/assets/membentang-02-white.svg"
+            src="/assets/membentang-02-blue.svg"
             className="absolute sm:static top-9 right-0 opacity-50 sm:opacity-100 w-40 sm:w-1/4 "
           />
         </div>

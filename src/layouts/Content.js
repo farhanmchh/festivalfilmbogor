@@ -5,7 +5,7 @@ import routes from '../routes';
 
 export default function Content() {
   return (
-    <div className="mt-20">
+    <div className="mt-20 z-10">
       <Routes>
         {routes.map((route, index) => {
           return (

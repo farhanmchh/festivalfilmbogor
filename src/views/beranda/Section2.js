@@ -23,7 +23,7 @@ export default function Section2() {
   return (
     <div className="bg-white relative z-10 py-10">
       <img
-        src="/assets/mekar-kembang-01-black.svg"
+        src="/assets/kembang-01-black.svg"
         className="absolute -z-10 opacity-10 w-full sm:w-[60%] -translate-x-1/2 left-1/2"
       />
       <div className="py-10 flex justify-between">
@@ -65,10 +65,7 @@ export default function Section2() {
           </div>
         </div>
         <div className="z-10 top-10 right-0 hidden sm:block">
-          <img
-            src="/assets/akar-mengakar-02-black.svg"
-            style={{ width: '33rem' }}
-          />
+          <img src="/assets/mengakar-02-green.svg" style={{ width: '21rem' }} />
         </div>
       </div>
 

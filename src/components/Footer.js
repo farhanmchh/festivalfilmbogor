@@ -6,11 +6,11 @@ export default function Footer() {
     <div className="w-full">
       <div className="bg-[#DB4C4C] relative py-14 z-0">
         <img
-          src="/assets/mekar-kembang-02-black.svg"
+          src="/assets/kembang-02-black.svg"
           className=" absolute w-1/2 sm:w-1/6 -top-1/3 -z-20 opacity-20"
         />
         <img
-          src="/assets/mekar-kembang-02-black.svg"
+          src="/assets/kembang-02-black.svg"
           className=" absolute w-1/2 sm:w-1/6 -bottom-1/3 left-1/3 -z-20 opacity-20"
         />
         <div className="mx-5 sm:mx-20 flex justify-between">
@@ -21,8 +21,8 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-5 mb-5">
-              <Mail className="text-white" />
-              <p className="border border-white px-1 text-white rounded-sm">
+              <Mail className="text-white" fontSize="large" />
+              <p className="border border-white px-[25px] py-[10px] text-white rounded-sm">
                 festivalfilmbogor@gmail.com
               </p>
             </div>
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
 
           <div className="relative w-1/3 hidden sm:block">
-            <img src="/assets/membentang-03-black.svg" className="w-full" />
+            <img src="/assets/membentang-03-blue.svg" className="w-full" />
             <img
               src="/assets/rusa-white.svg"
               className="w-2/5 absolute  left-1/2 top-5 -translate-x-1/2"
