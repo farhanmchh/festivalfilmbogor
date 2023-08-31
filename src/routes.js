@@ -3,6 +3,7 @@ import React from "react";
 const Beranda = React.lazy(() => import("./views/beranda/Index"));
 const Program = React.lazy(() => import("./views/program/Index"));
 const Tentang = React.lazy(() => import("./views/tentang/Index"));
+const kontak = React.lazy(() => import("./views/kontak/Index"));
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     path: "/tentang",
     name: "Tentang",
     element: Tentang,
+  },
+  {
+    path: "/kontak",
+    name: "Kontak",
+    element: kontak,
   },
 ];
 
