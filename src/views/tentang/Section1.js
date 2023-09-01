@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 function Section1() {
   return (
     <div className="bg-black py-20 relative">
       {/* TITLE */}
       <div className="text-center">
-        <h2 className="mb-1 text-[#FEDE88]">Sejarah</h2>
-        <h2 className="text-white">Festival Film Bogor</h2>
+        <h2 className="mb-1 text-[#FEDE88] text-3xl sm:text-4xl">Sejarah</h2>
+        <h2 className="text-white text-3xl sm:text-4xl">Festival Film Bogor</h2>
       </div>
 
       <div className="mt-24">
@@ -72,23 +72,23 @@ function Section1() {
         </div>
 
         {/* BORDER */}
-        <div className="my-36">
+        <div className="my-20">
           <div className="border border-white w-[93%] mx-auto" />
         </div>
 
-        <div className="text-center mb-[4.69rem] px-5">
-          <h2 className="text-white">Apa itu</h2>
-          <h2 className="mb-1 text-[#FEDE88]">Festival Film Bogor?</h2>
+        <div className="text-center mb-10 px-5">
+          <h3 className="text-white">Apa itu</h3>
+          <h3 className="mb-1 text-[#FEDE88]">Festival Film Bogor?</h3>
         </div>
 
-        <div className="text-justify sm:text-center">
-          <p className="text-white text-xl w-3/4 mx-auto leading-loose">
+        <div className="text-center">
+          <p className="text-white w-3/4 mx-auto leading-loose">
             Festival Film Bogor adalah ajang kompetisi film nasional yang sudah
-            dimulai sejak tahun 2022{" "}
+            dimulai sejak tahun 2022{' '}
             <b>
               (Dengan pendaftar lebih dari 300 film dari berbagai daerah di
               Indonesia).
-            </b>{" "}
+            </b>{' '}
             Festival ini diinisiasi oleh Komunitas Film Bogor, Mari Belajar Film
             dan berbagai komunitas film yang ada di Bogor raya.
           </p>

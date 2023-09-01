@@ -1,9 +1,9 @@
-import { Input } from "@mui/material";
-import React from "react";
+import { Input } from '@mui/material';
+import React from 'react';
 
 function Section2() {
   return (
-    <div className="bg-[#FEDE88] relative">
+    <div className="bg-[#FEDE88] relative z-0">
       <img
         src="/assets/mekar-kembang-01-green-1-top-left.svg"
         className="absolute w-[13%] md:w-[5%] top-0 left-0"
@@ -14,10 +14,10 @@ function Section2() {
       />
       <img
         src="/assets/si-rusa-green-3.svg"
-        className="absolute h-full right-0 top-0 hidden md:block"
+        className="absolute h-full right-0 top-0 hidden sm:block -z-10"
       />
 
-      <div className="px-10 sm:px-16 py-20">
+      <div className="px-10 sm:px-16 py-20 z-0">
         <p className="font-bold text-2xl sm:text-4xl z-50">
           BARANGKALI INGIN BERTANYA?
         </p>
@@ -25,22 +25,24 @@ function Section2() {
           Pertanyaan akan dikirim & dijawab melalui email.
         </p>
 
-        <div className="">
-          <input
-            placeholder="Nama"
-            className="w-full md:w-[21%] outline outline-1 mb-8 md:mb-0 mr-8 p-3"
-          />
-          <input
-            placeholder="Email"
-            className="w-full md:w-[21%] outline outline-1 mb-8 p-3"
-          />
+        <div className="w-full md:w-1/2">
+          <div className="grid grid-cols-2 gap-7">
+            <input
+              placeholder="Nama"
+              className="w-full outline outline-1 p-3"
+            />
+            <input
+              placeholder="Email"
+              className="w-full outline outline-1 p-3"
+            />
 
-          <textarea
-            placeholder="Tulis Pesanmu..."
-            className="w-full md:w-[65%] outline outline-1 p-3 h-36"
-          />
+            <textarea
+              placeholder="Tulis Pesanmu..."
+              className="w-full outline outline-1 p-3 h-36 col-span-2"
+            />
+          </div>
 
-          <div className="flex justify-between mt-5 w-full md:w-[65%]">
+          <div className="flex justify-between mt-5 w-full">
             <a className="cursor-pointer">
               <div className="bg-black w-fit py-1 px-3 flex gap-2 z-10">
                 <img
@@ -51,7 +53,7 @@ function Section2() {
               </div>
             </a>
 
-            <div className="flex gap-8">
+            <div className="flex gap-5">
               <a className="cursor-pointer">
                 <div className="bg-[#DB4C4C] w-fit py-1 px-3 flex gap-2 z-10">
                   <img src="/assets/instagram-logo.svg" className="w-5" />

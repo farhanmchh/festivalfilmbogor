@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 
 function Section2() {
   const visi = [
     {
       id: 1,
       content:
-        "Mengembangkan potensi kreatif di kalangan sineas baru di Indonesia.",
+        'Mengembangkan potensi kreatif di kalangan sineas baru di Indonesia.',
     },
     {
       id: 2,
-      content: "Membuka peluang kepada sineas independen ke industri kreatif.",
+      content: 'Membuka peluang kepada sineas independen ke industri kreatif.',
     },
     {
       id: 3,
-      content: "Membuat wadah untuk insan kreatif.",
+      content: 'Membuat wadah untuk insan kreatif.',
     },
     {
       id: 4,
-      content: "Meningkatkan budaya menonton film di Kota Bogor.",
+      content: 'Meningkatkan budaya menonton film di Kota Bogor.',
     },
   ];
 
@@ -25,28 +25,28 @@ function Section2() {
     {
       id: 1,
       content:
-        "Menjadi wadah bagi pertumbuhan sineas-sineas baru, khususnya di Kota Bogor.",
+        'Menjadi wadah bagi pertumbuhan sineas-sineas baru, khususnya di Kota Bogor.',
     },
     {
       id: 2,
-      content: "Memperkenalkan film-film Bogor kepada masyarakat luas.",
+      content: 'Memperkenalkan film-film Bogor kepada masyarakat luas.',
     },
     {
       id: 3,
       content:
-        "Menjadikan acara ini sebagai wadah berkumpulnya para sineas dan bertukar pikiran.",
+        'Menjadikan acara ini sebagai wadah berkumpulnya para sineas dan bertukar pikiran.',
     },
     {
       id: 4,
-      content: "Membuat gerakan anak muda mulai membuat film.",
+      content: 'Membuat gerakan anak muda mulai membuat film.',
     },
     {
       id: 5,
-      content: "Mengapresiasi karya film-film sineas.",
+      content: 'Mengapresiasi karya film-film sineas.',
     },
     {
       id: 6,
-      content: "Memperkenalkan budaya di Kota Bogor.",
+      content: 'Memperkenalkan budaya di Kota Bogor.',
     },
   ];
 
@@ -62,7 +62,7 @@ function Section2() {
       <div className="h-full absolute flex items-center -z-0">
         <img
           src="/assets/membentang-05-blue.svg"
-          className="w-[80%] mt-52 md:mt-0"
+          className="w-[80%] mt-52 md:mt-0 hidden sm:block"
         />
       </div>
       <img
