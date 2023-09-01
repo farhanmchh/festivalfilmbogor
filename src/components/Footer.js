@@ -1,10 +1,17 @@
-import { Copyright, Instagram, Mail } from '@mui/icons-material';
-import React from 'react';
+import { Copyright, Instagram, Mail } from "@mui/icons-material";
+import React from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Footer() {
+  const location = useLocation();
+
   return (
     <div className="w-full">
-      <div className="bg-[#DB4C4C] relative py-14 z-0">
+      <div
+        className={`${
+          location.pathname === "/kontak" ? "hidden" : "block"
+        } bg-[#DB4C4C] relative py-14 z-0`}
+      >
         <img
           src="/assets/kembang-02-black.svg"
           className=" absolute w-1/2 sm:w-1/6 -top-1/3 -z-20 opacity-20"
@@ -49,7 +56,7 @@ export default function Footer() {
           <div className="flex gap-10 sm:gap-20 mb-20">
             <img src="/assets/logo-white.svg" className="w-1/3 sm:w-1/4" />
             <div className="text-white w-1/2 sm:w-1/6 self-center">
-              <h3 style={{ lineHeight: '3rem' }}>
+              <h3 style={{ lineHeight: "3rem" }}>
                 15 - 17 Desember <span className="font-light">2023</span>
               </h3>
             </div>

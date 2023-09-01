@@ -1,14 +1,14 @@
-import { Menu } from '@mui/icons-material';
-import { List, ListItem, ListItemButton } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Menu } from "@mui/icons-material";
+import { List, ListItem, ListItemButton } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const navbarLink = [
-  { name: 'Beranda', href: '/beranda', active: false },
-  { name: 'Tentang', href: '/tentang', active: false },
-  { name: 'Program', href: '/program', active: false },
-  { name: 'Arsip', href: '/arsip', active: false },
-  { name: 'Kontak', href: '/kontak', active: false },
+  { name: "Beranda", href: "/beranda", active: false },
+  { name: "Tentang", href: "/tentang", active: false },
+  { name: "Program", href: "/program", active: false },
+  { name: "Arsip", href: "/arsip", active: false },
+  { name: "Kontak", href: "/kontak", active: false },
 ];
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
             <a
               href={navbar.href}
               className={`text-black ${
-                navbar.active ? 'text-opacity-100' : 'text-opacity-50'
+                navbar.active ? "text-opacity-100" : "text-opacity-50"
               }`}
             >
               {navbar.name}
@@ -50,10 +50,10 @@ export default function Navbar() {
       </div>
       <div
         className={`bg-white w-full absolute top-20 -z-10 ${
-          showNavigation ? 'block' : 'hidden'
+          showNavigation ? "block" : "hidden"
         }`}
         style={{
-          animation: showNavigation ? 'in-from-top 0.3s' : 'out-to-top 0.3s',
+          animation: showNavigation ? "in-from-top 0.3s" : "out-to-top 0.3s",
         }}
       >
         <List>
@@ -63,7 +63,7 @@ export default function Navbar() {
                 <a
                   href={navbar.href}
                   className={`text-black ${
-                    navbar.active ? 'text-opacity-100' : 'text-opacity-50'
+                    navbar.active ? "text-opacity-100" : "text-opacity-50"
                   }`}
                 >
                   {navbar.name}
