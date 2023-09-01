@@ -21,8 +21,8 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-5 mb-5">
-              <Mail className="text-white" fontSize="large" />
-              <p className="border border-white px-[25px] py-[10px] text-white rounded-sm">
+              <Mail className="text-white" />
+              <p className="border border-white px-1 text-white rounded-sm">
                 festivalfilmbogor@gmail.com
               </p>
             </div>
