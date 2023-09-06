@@ -63,19 +63,19 @@ export default function Footer() {
           </div>
 
           <div className="text-white grid grid-cols-5  sm:gap-x-10 gap-y-5 sm:gap-y-0">
-            <a href="#" className="col-span-2 ">
+            <a href="/beranda" className="col-span-2 ">
               Beranda
             </a>
-            <a href="#" className="col-span-2 ">
+            <a href="/tentang" className="col-span-2 ">
               Tentang
             </a>
-            <a href="#" className="">
+            <a href="/program" className="">
               Program
             </a>
-            <a href="#" className="col-span-3 text-center ">
-              Arsip
+            <a href="/galeri" className="col-span-3 text-center ">
+              Galeri
             </a>
-            <a href="#" className="col-span-2 ">
+            <a href="/kontak" className="col-span-2 ">
               kontak
             </a>
           </div>

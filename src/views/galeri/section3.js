@@ -14,31 +14,31 @@ const merchandises = [
     title: 'T-Shirt',
     variant: '(Hitam)',
     img: '/images/merchandise-1.png',
-    url: null,
+    url: 'https://wa.me/p/6470057076420612/6285770558706',
   },
   {
     title: 'T-Shirt',
     variant: '(Putih)',
     img: '/images/merchandise-2.png',
-    url: null,
+    url: 'https://wa.me/p/9672212966183385/6285770558706',
   },
   {
     title: 'Accesories',
     variant: null,
     img: '/images/merchandise-3.png',
-    url: null,
+    url: 'https://wa.me/p/7432837243398087/6285770558706',
   },
   {
     title: 'Sticker Pack',
     variant: '',
     img: '/images/merchandise-4.png',
-    url: null,
+    url: 'https://wa.me/p/9692435810827506/6285770558706',
   },
   {
     title: 'Totebag',
     variant: '',
     img: '/images/merchandise-5.png',
-    url: null,
+    url: 'https://wa.me/p/6610535082373145/6285770558706',
   },
 ];
 
@@ -126,7 +126,7 @@ export default function Section3() {
           draggable: true,
         }}
         autoplay={{
-          delay: 3000,
+          delay: 4000,
           disableOnInteraction: false,
         }}
       >
@@ -137,7 +137,16 @@ export default function Section3() {
               {merchandise.title}{' '}
               <span className="font-normal">{merchandise.variant}</span>
             </h5>
-            <Button className="bg-[#FEDE88]">Pesan</Button>
+            <Button
+              className="bg-[#FEDE88]"
+              onClick={() => {
+                isMobile
+                  ? window.open(merchandise.url)
+                  : window.open('https://wa.me/6285770558706');
+              }}
+            >
+              Pesan
+            </Button>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -197,13 +206,11 @@ export default function Section3() {
             dark={false}
             className="bg-[#2CC293] text-white border border-white"
             onClick={() => {
-              if (window.innerWidth < 768) {
-                window.open(
-                  'https://www.whatsapp.com/catalog/6285770558706/?app_absent=0'
-                );
-              } else {
-                window.open('https://wa.me/6285770558706');
-              }
+              isMobile
+                ? window.open(
+                    'https://www.whatsapp.com/catalog/6285770558706/?app_absent=0'
+                  )
+                : window.open('https://wa.me/6285770558706');
             }}
           >
             Kunjungi
