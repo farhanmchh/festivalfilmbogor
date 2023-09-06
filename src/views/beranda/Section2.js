@@ -1,10 +1,13 @@
 import { ArrowForwardIos } from '@mui/icons-material';
-import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const schedules = [
   { title: 'Online Talkshow', periode: 'Juli - November' },
@@ -67,8 +70,8 @@ export default function Section2() {
         <div className="border border-black w-[87%] mx-auto" />
       </div>
 
-      <div className="mx-5 sm:mx-20 sm:flex justify-between">
-        <div className="w-full sm:w-2/5">
+      <div className="mx-5 sm:mx-20 sm:flex justify-between ">
+        <div className="w-full sm:w-2/5 ">
           <div className="mb-10 text-center sm:text-start">
             <h3>Program</h3>
             <h3 className="font-normal">Festival Film Bogor 2023</h3>
@@ -81,22 +84,25 @@ export default function Section2() {
           </p>
         </div>
 
-        <div className="w-full h-52 sm:w-2/5 border-2 border-black relative overflow-hidden">
-          <AutoPlaySwipeableViews
-            index={activeStep}
-            onChangeIndex={(step) => setActiveStep(step)}
-            enableMouseEvents
+        <div className="w-full sm:w-[35%]">
+          <Swiper
+            className="h-52 border-2 border-black overflow-hidden"
+            modules={[Autoplay]}
+            slidesPerView={1}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
           >
             {images.map((each) => (
-              <img src={each.image} className="w-full" />
+              <SwiperSlide>
+                <img src={each.image} className="w-full object-cover" />
+              </SwiperSlide>
             ))}
-          </AutoPlaySwipeableViews>
-          <div
-            className="absolute bottom-0 right-0 bg-yellow-400 px-3 py-2 border-l-2 border-t-2 border-black cursor-pointer"
-            onClick={() => navigate('/program')}
-          >
-            <ArrowForwardIos fontSize="10" />
-          </div>
+            <div
+              className="absolute bottom-0 right-0 bg-yellow-400 px-3 py-2 border-l-2 border-t-2 border-black cursor-pointer z-10"
+              onClick={() => navigate('/program')}
+            >
+              <ArrowForwardIos fontSize="10" />
+            </div>
+          </Swiper>
         </div>
       </div>
     </div>

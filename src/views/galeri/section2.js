@@ -1,5 +1,39 @@
-import { ArrowBackRounded, ArrowForwardRounded } from '@mui/icons-material';
 import React from 'react';
+import { ArrowBackRounded, ArrowForwardRounded } from '@mui/icons-material';
+import { Autoplay, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+const contents = [
+  {
+    img: '/images/galeri-1.png',
+    title: 'Gratis!',
+    description:
+      'Bagi para penggemar dan penonton film yang ingin berkunjung FFB, acara ini tidak dipungut biaya sama sekali, alias gratis.',
+  },
+  {
+    img: '/images/galeri-2.png',
+    title: 'Murah!',
+    description:
+      'Bagi para penggemar dan penonton film yang ingin berkunjung FFB, acara ini tidak dipungut biaya sama sekali, alias gratis.',
+  },
+  {
+    img: '/images/galeri-1.png',
+    title: 'Meriah!',
+    description:
+      'Bagi para penggemar dan penonton film yang ingin berkunjung FFB, acara ini tidak dipungut biaya sama sekali, alias gratis.',
+  },
+  {
+    img: '/images/galeri-2.png',
+    title: 'Menarik!',
+    description:
+      'Bagi para penggemar dan penonton film yang ingin berkunjung FFB, acara ini tidak dipungut biaya sama sekali, alias gratis.',
+  },
+];
 
 export default function Section2() {
   return (
@@ -30,17 +64,36 @@ export default function Section2() {
       </h3>
       <div className="w-[80%] lg:w-[60%] mx-auto">
         <div className="sm:flex justify-center mb-3">
-          <div className="w-full h-56 border-2 border-black">
-            <img src="/images/galeri-1.png" className="w-full h-full" />
-          </div>
-          <div className="w-full sm:w-2/3 h-56 border-2 border-black bg-white px-7 py-5">
-            <h4 className="text-center mb-3">#1 Gratis!</h4>
+          <Swiper
+            className="w-full h-56 border-2 border-black overflow-hidden"
+            modules={[Autoplay, Navigation]}
+            navigation={{ nextEl: '#nextBtn', prevEl: '#prevBtn' }}
+            slidesPerView={1}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+          >
+            {contents.map((content) => (
+              <SwiperSlide>
+                <img src={content.img} className="w-full h-full object-cover" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <Swiper
+            className="w-full sm:w-2/3 h-56 border-2 border-black bg-white "
+            modules={[Autoplay, Navigation]}
+            navigation={{ nextEl: '#nextBtn', prevEl: '#prevBtn' }}
+            slidesPerView={1}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+          >
+            {contents.map((content, index) => (
+              <SwiperSlide className="px-7 py-5">
+                <h4 className="text-center mb-3">
+                  #{index + 1} {content.title}
+                </h4>
 
-            <p>
-              Bagi para penggemar dan penonton film yang ingin berkunjung FFB,
-              acara ini tidak dipungut biaya sama sekali, alias gratis.
-            </p>
-          </div>
+                <p>{content.description}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         <div className="flex justify-between">
@@ -53,10 +106,10 @@ export default function Section2() {
             </span>
           </div>
           <div className="flex gap-2">
-            <button className="bg-black px-3 py-2 text-white">
+            <button className="bg-black px-3 py-2 text-white" id="prevBtn">
               <ArrowBackRounded />
             </button>
-            <button className="bg-black px-3 py-2 text-white">
+            <button className="bg-black px-3 py-2 text-white" id="nextBtn">
               <ArrowForwardRounded />
             </button>
           </div>
