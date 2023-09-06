@@ -50,7 +50,6 @@ function Section2() {
     }
   };
 
-  console.log("data message", dataMessage);
   return (
     <div className="bg-[#FEDE88] relative z-0">
       <img
