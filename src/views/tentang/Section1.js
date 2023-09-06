@@ -4,70 +4,102 @@ function Section1() {
   return (
     <div className="bg-black py-20 relative">
       {/* TITLE */}
-      <div className="text-center">
+      <div className="text-center mb-32">
         <h2 className="mb-1 text-[#FEDE88] text-3xl sm:text-4xl">Sejarah</h2>
         <h2 className="text-white text-3xl sm:text-4xl">Festival Film Bogor</h2>
       </div>
 
-      <div className="mt-24">
+      <div className="">
         <img
           src="/assets/akar-mengakar-03-grey-2.svg"
           className="w-full -z-1 absolute mt-10"
         />
 
         {/* Deskripsi */}
-        <div className=" justify-items-center px-0 sm:px-24 grid grid-cols-2 sm:grid-cols-3">
-          <div className="grid justify-items-center place-content-between pt-8 gap-y-24 z-10">
-            <div className="grid justify-items-center">
-              <div className="mb-14 relative w-16 flex items-center">
-                <img
-                  src="/assets/mekar-kembang-01-white-1.svg"
-                  className="opacity-25 absolute"
-                />
-                <p className="text-white text-2xl font-bold mx-auto">1</p>
-              </div>
-              <p className="text-white text-xl">Deskripsi 1</p>
-            </div>
-
-            <div className="grid justify-items-center">
-              <div className="mb-14 relative w-16 flex items-center">
-                <img
-                  src="/assets/mekar-kembang-01-white-1.svg"
-                  className="opacity-50 absolute"
-                />
-                <p className="text-white text-2xl font-bold mx-auto">2</p>
-              </div>
-              <p className="text-white text-xl">Deskripsi 1</p>
-            </div>
-          </div>
-
+        <div className="sm:grid grid-cols-2 grid-flow-row gap-y-10 gap-x-20 relative">
           <img
-            src="/assets/si-rusa-green-2.svg"
-            className="my-auto w-[50%] sm:w-full absolute opacity-40 sm:opacity-100 sm:relative mt-16"
+            src="/assets/si-rusa-green.svg"
+            className="w-[20%] absolute -top-28 sm:top-20 left-1/2 -translate-x-1/2 opacity-100"
           />
 
-          <div className="grid justify-items-center place-content-between pt-8 z-10">
-            <div className="grid justify-items-center">
-              <div className="mb-14 relative w-16 flex items-center">
-                <img
-                  src="/assets/mekar-kembang-01-white-1.svg"
-                  className="absolute"
-                />
-                <p className="text-2xl font-bold mx-auto z-10">4</p>
-              </div>
-              <p className="text-white text-xl">Deskripsi 1</p>
+          {/* Deskripsi 1 */}
+          <div className="w-[80%] sm:w-[60%] mx-auto mb-10">
+            <div className="mx-auto mb-10 relative w-16 flex items-center">
+              <img
+                src="/assets/mekar-kembang-01-white-1.svg"
+                className="opacity-25 absolute"
+              />
+              <p className="text-white text-2xl font-bold mx-auto">1</p>
             </div>
+            <p className="text-white text-lg text-center">
+              pertemuan pegiat film di bogor pada{' '}
+              <span className="text-[#FEDE88] font-semibold">Agustus 2020</span>
+              . Membahas{' '}
+              <span className="text-[#FEDE88] font-semibold">
+                perkembangan dan pemetaan
+              </span>{' '}
+              film di wilayah Bogor dan juga FFB.
+            </p>
+          </div>
 
-            <div className="grid justify-items-center">
-              <div className="mb-14 relative w-16 flex items-center">
-                <img
-                  src="/assets/mekar-kembang-01-white-1.svg"
-                  className="opacity-75 absolute"
-                />
-                <p className="text-2xl font-bold mx-auto z-10">3</p>
-              </div>
-              <p className="text-white text-xl">Deskripsi 1</p>
+          {/* Deskripsi 2 */}
+          <div className="w-[80%] sm:w-[60%] mx-auto mb-10 order-3">
+            <div className="mx-auto mb-10 relative w-16 flex items-center">
+              <img
+                src="/assets/mekar-kembang-01-white-1.svg"
+                className="opacity-50 absolute"
+              />
+              <p className="text-white text-2xl font-bold mx-auto">2</p>
             </div>
+            <p className="text-white text-lg text-center">
+              Bertemu lagi di{' '}
+              <span className="text-[#FEDE88] font-semibold">Oktober 2022</span>
+              , berkumpul dan membulatkan tekad untuk merealisasikan{' '}
+              <span className="text-[#FEDE88] font-semibold">
+                Festival Film Bogor
+              </span>
+            </p>
+          </div>
+
+          {/* Deskripsi 3 */}
+          <div className="w-[80%] sm:w-[60%] mx-auto mb-10 order-last">
+            <div className="mx-auto mb-10 relative w-16 flex items-center">
+              <img
+                src="/assets/mekar-kembang-01-white-1.svg"
+                className="opacity-75 absolute"
+              />
+              <p className="text-2xl font-bold mx-auto z-10">3</p>
+            </div>
+            <p className="text-white text-lg text-center">
+              Perdana Festival Film Bogor hadir pada{' '}
+              <span className="text-[#FEDE88] font-semibold">
+                akhir tahun 2022
+              </span>{' '}
+              dengan tema "Berkarya dan Berbudaya".{' '}
+              <span className="text-[#FEDE88] font-semibold">
+                300 lebih film terdaftar
+              </span>{' '}
+              pada 3 kategori yang dibuka.
+            </p>
+          </div>
+
+          {/* Deskripsi 4 */}
+          <div className="w-[80%] sm:w-[60%] mx-auto mb-10">
+            <div className="mx-auto mb-10 relative w-16 flex items-center">
+              <img
+                src="/assets/mekar-kembang-01-white-1.svg"
+                className="absolute"
+              />
+              <p className="text-2xl font-bold mx-auto z-10">4</p>
+            </div>
+            <p className="text-white text-lg text-center">
+              Tahun 2023,{' '}
+              <span className="text-[#FEDE88] font-semibold">FFB kembali</span>{' '}
+              dengan tema "Mekar dan Mengakar". Dengan puncak acara pada tanggal{' '}
+              <span className="text-[#FEDE88] font-semibold">
+                15,16,17 Desember 2023
+              </span>
+            </p>
           </div>
         </div>
 

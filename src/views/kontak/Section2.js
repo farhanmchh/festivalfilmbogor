@@ -1,5 +1,6 @@
 import { Input } from '@mui/material';
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 
 function Section2() {
   return (
@@ -13,7 +14,7 @@ function Section2() {
         className="absolute w-[13%] md:w-[5%] bottom-0 left-0 -rotate-90 "
       />
       <img
-        src="/assets/si-rusa-green-3.svg"
+        src="/assets/si-rusa-green.svg"
         className="absolute h-full right-0 top-0 hidden sm:block -z-10"
       />
 
@@ -43,7 +44,7 @@ function Section2() {
           </div>
 
           <div className="flex justify-between mt-5 w-full">
-            <a className="cursor-pointer">
+            <button className="cursor-pointer">
               <div className="bg-black w-fit py-1 px-3 flex gap-2 z-10">
                 <img
                   src="/assets/mekar-kembang-01-white-2.svg"
@@ -51,26 +52,36 @@ function Section2() {
                 />
                 <p className="text-white font-semibold">Kirim</p>
               </div>
-            </a>
+            </button>
 
-            <div className="flex gap-5">
-              <a className="cursor-pointer">
+            <div className="flex gap-5 z-10">
+              <button
+                onClick={() =>
+                  window.open('https://www.instagram.com/festivalfilmbogor/')
+                }
+              >
                 <div className="bg-[#DB4C4C] w-fit py-1 px-3 flex gap-2 z-10">
                   <img src="/assets/instagram-logo.svg" className="w-5" />
                   <p className="text-white font-semibold hidden sm:block">
                     Instagram
                   </p>
                 </div>
-              </a>
+              </button>
 
-              <a className="cursor-pointer z-10">
+              <button
+                onClick={() =>
+                  window.open(
+                    'https://mail.google.com/mail/?view=cm&fs=1&to=festivalfilmbogor@gmail.com'
+                  )
+                }
+              >
                 <div className="bg-[#DB4C4C] w-fit py-1 px-3 flex gap-2">
                   <img src="/assets/email-logo.svg" className="w-5" />
                   <p className="text-white font-semibold hidden sm:block">
                     Email
                   </p>
                 </div>
-              </a>
+              </button>
             </div>
           </div>
         </div>

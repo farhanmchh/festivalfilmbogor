@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DetailModal from './DetailModal';
+import Button from '../../components/button';
 
 const cards = [
   {
@@ -81,19 +82,15 @@ export default function Section2() {
                 </div>
                 <div className="p-3 border border-white">
                   <h5 className="text-white font-light mb-7">{card.title}</h5>
-                  <button
-                    className="bg-[#FEDE88] font-semibold flex gap-1 px-2 py-1"
+                  <Button
+                    className="bg-[#FEDE88]"
                     onClick={() => {
                       setDetailData({ title: card.title, body: card.body });
                       setDetailVisible(true);
                     }}
                   >
-                    <img
-                      src="/assets/kembang-01-black.svg"
-                      className="w-5 self-center"
-                    />
                     Lihat
-                  </button>
+                  </Button>
                 </div>
               </div>
             ))}

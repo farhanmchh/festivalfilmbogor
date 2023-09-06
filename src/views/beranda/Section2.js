@@ -1,9 +1,17 @@
 import { ArrowForwardIos } from '@mui/icons-material';
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
+const schedules = [
+  { title: 'Online Talkshow', periode: 'Juli - November' },
+  { title: 'Seminar Discussion', periode: 'Agustus - November' },
+  { title: 'Eksebisi & Apresiasi', periode: 'Desember' },
+  { title: 'Awarding Night', periode: 'Desember' },
+];
 
 const images = [
   {
@@ -18,6 +26,7 @@ const images = [
 ];
 
 export default function Section2() {
+  const navigate = useNavigate();
   const [activeStep, setActiveStep] = useState(0);
 
   return (
@@ -34,30 +43,14 @@ export default function Section2() {
           </div>
 
           <div className="block sm:grid grid-cols-2 gap-10 mb-7 sm:mb-10">
-            <div className="text-center w-fit mx-auto mb-5">
-              <div className="text-white bg-black rounded-full px-16 sm:px-4 py-4 sm:py-2 font-semibold">
-                Online talkshow
+            {schedules.map((schedule) => (
+              <div className="text-center w-fit mx-auto mb-10">
+                <div className="text-white bg-black rounded-full px-16 sm:px-4 py-4 sm:py-2 mb-2 font-semibold">
+                  {schedule.title}
+                </div>
+                <p className="font-medium">{schedule.periode}</p>
               </div>
-              <p className="font-medium">Juli - November</p>
-            </div>
-            <div className="text-center w-fit mx-auto mb-5">
-              <div className="text-white bg-black rounded-full px-16 sm:px-4 py-4 sm:py-2 font-semibold">
-                Seminar Discussion
-              </div>
-              <p className="font-medium">Agustus - November</p>
-            </div>
-            <div className="text-center w-fit mx-auto mb-5">
-              <div className="text-white bg-black rounded-full px-16 sm:px-4 py-4 sm:py-2 font-semibold">
-                Eksebisi & Apresiasi
-              </div>
-              <p className="font-medium">Desember</p>
-            </div>
-            <div className=" text-center w-fit mx-auto mb-5">
-              <div className="text-white bg-black rounded-full px-16 sm:px-4 py-4 sm:py-2 font-semibold">
-                Awarding Night
-              </div>
-              <p className="font-medium">Desember</p>
-            </div>
+            ))}
           </div>
 
           <div className="bg-[#2CC293] rounded-full w-fit mx-auto px-12 sm:px-4 py-4 sm:py-2 font-semibold">
@@ -88,27 +81,20 @@ export default function Section2() {
           </p>
         </div>
 
-        <div className="w-full sm:w-2/5 border-2 border-black relative">
+        <div className="w-full h-52 sm:w-2/5 border-2 border-black relative overflow-hidden">
           <AutoPlaySwipeableViews
             index={activeStep}
             onChangeIndex={(step) => setActiveStep(step)}
             enableMouseEvents
           >
             {images.map((each) => (
-              <Box
-                component="img"
-                sx={{
-                  height: 200,
-                  display: 'block',
-                  maxWidth: 700,
-                  overflow: 'hidden',
-                  width: '100%',
-                }}
-                src={each.image}
-              />
+              <img src={each.image} className="w-full" />
             ))}
           </AutoPlaySwipeableViews>
-          <div className="absolute bottom-0 right-0 bg-yellow-400 px-3 py-2 border-l-2 border-t-2 border-black">
+          <div
+            className="absolute bottom-0 right-0 bg-yellow-400 px-3 py-2 border-l-2 border-t-2 border-black cursor-pointer"
+            onClick={() => navigate('/program')}
+          >
             <ArrowForwardIos fontSize="10" />
           </div>
         </div>

@@ -78,12 +78,12 @@ function Section2() {
       <div className="grid md:grid-cols-2 pt-24 pb-28">
         <div className="px-10 sm:px-28 z-10">
           <div className="bg-white flex justify-self-center py-3 px-14 w-fit rounded-full border-2 border-black mb-10 sm:mb-16 mx-auto">
-            <p className="text-4xl font-bold">Visi</p>
+            <h3>Visi</h3>
           </div>
 
           <ul className="list-disc list-outside text-justify">
             {visi.map((e) => (
-              <li className="mb-7 text-xl sm:text-2xl font-medium">
+              <li className="mb-7 text-xl sm:text-xl font-medium">
                 {e.content}
               </li>
             ))}
@@ -92,12 +92,12 @@ function Section2() {
 
         <div className="px-10 sm:px-24 z-10 pt-20 md:pt-0">
           <div className="bg-white flex justify-self-center py-3 px-14 w-fit rounded-full border-2 border-black mb-10 sm:mb-16 mx-auto">
-            <p className="text-4xl font-bold">Misi</p>
+            <h3>Misi</h3>
           </div>
 
           <ul className="list-disc list-outside text-justify">
             {misi.map((e) => (
-              <li className="mb-7 text-xl sm:text-2xl font-medium">
+              <li className="mb-7 text-xl sm:text-xl font-medium">
                 {e.content}
               </li>
             ))}
@@ -107,17 +107,15 @@ function Section2() {
 
       {/* Mekar dan mengakar */}
       <div className="text-center pb-24 z-10">
-        <p className="text-3xl sm:text-6xl font-semibold mb-4 z-20 px-4">
-          MEKAR DAN MENGAKAR
-        </p>
-        <p className="text-xl sm:text-2xl mb-20 z-20">
-          Tema Festival Film Bogor 2023
-        </p>
+        <h1 className="mb-4 z-20 px-4">MEKAR DAN MENGAKAR</h1>
+        <h4 className="mb-20 z-20">
+          <span className="block sm:inline">Tema</span> Festival Film Bogor 2023
+        </h4>
 
         <div className="grid justify-items-center md:flex md:justify-center gap-12">
           <div className="grid justify-items-center md:w-[35%] w-[80%]">
             <div className="bg-[#FEDE88] border-4 border-black px-8 py-4 w-fit z-10">
-              <p className="text-2xl sm:text-4xl font-semibold">MEKAR</p>
+              <h3>MEKAR</h3>
             </div>
             <div className="bg-black p-5 z-10">
               <p className="text-white text-xl leading-loose text-left">
@@ -128,7 +126,7 @@ function Section2() {
           </div>
           <div className="grid justify-items-center md:w-[35%] w-[80%]">
             <div className="bg-[#2CC293] border-4 border-black px-8 py-4 w-fit z-10">
-              <p className="text-2xl sm:text-4xl font-semibold">MENGAKAR</p>
+              <h3>MENGAKAR</h3>
             </div>
             <div className="bg-black p-5 z-10">
               <p className="text-white text-xl leading-loose text-left">

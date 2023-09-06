@@ -33,16 +33,18 @@ export default function Section3() {
             </span>
             <div className="flex gap-3">
               <p className="self-center">Bogor Creative Center</p>
-              <a
-                href="#"
-                className="border border-white flex px-3 relative w-24"
+              <button
+                className="border border-white flex px-3 relative w-24 duration-300 hover:scale-105"
+                onClick={() =>
+                  window.open('https://goo.gl/maps/qv47oN2dksnE7ezG8')
+                }
               >
                 <span className="text-sm">Lokasi</span>
                 <SendRounded
                   fontSize="small"
                   className="-rotate-45 text-[#2CC293] absolute top-0 right-2"
                 />
-              </a>
+              </button>
             </div>
           </div>
           <div className="mb-2 sm:flex gap-2 ">
@@ -51,16 +53,18 @@ export default function Section3() {
             </span>
             <div className="flex gap-3">
               <p className="self-center">Amaris Hotel</p>
-              <a
-                href="#"
-                className="border border-white flex px-3 relative w-24"
+              <button
+                className="border border-white flex px-3 relative w-24 duration-300 hover:scale-105"
+                onClick={() =>
+                  window.open('https://goo.gl/maps/DpW1BjdFQ1asCk9E8')
+                }
               >
                 <span className="text-sm">Lokasi</span>
                 <SendRounded
                   fontSize="small"
                   className="-rotate-45 text-[#2CC293] absolute top-0 right-2"
                 />
-              </a>
+              </button>
             </div>
           </div>
         </div>
