@@ -1,8 +1,56 @@
-import { Input } from '@mui/material';
-import axios from 'axios';
-import React, { useState } from 'react';
+import { Input } from "@mui/material";
+import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 
 function Section2() {
+  const [dataMessage, setDataMessage] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [invalid, setInvalid] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+
+  const handleSendEmail = async () => {
+    setLoading(true);
+    try {
+      if (!dataMessage.name) {
+        throw new Error("invalid");
+      }
+      if (!dataMessage.email) {
+        throw new Error("invalid");
+      }
+      if (!dataMessage.message) {
+        throw new Error("invalid");
+      }
+
+      var templateParams = {
+        from_name: dataMessage.name,
+        from_email: dataMessage.email,
+        message: dataMessage.message,
+      };
+
+      emailjs
+        .send(
+          "service_kgjaawn",
+          "template_pa5o0wn",
+          templateParams,
+          "PBAIMI6gO3Gvn55LS"
+        )
+        .then(function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          window.location.reload();
+        });
+    } catch (error) {
+      setLoading(false);
+    }
+  };
+
+  console.log("data message", dataMessage);
   return (
     <div className="bg-[#FEDE88] relative z-0">
       <img
@@ -31,24 +79,36 @@ function Section2() {
             <input
               placeholder="Nama"
               className="w-full outline outline-1 p-3"
+              onChange={(e) =>
+                setDataMessage({ ...dataMessage, name: e.target.value })
+              }
+              value={dataMessage.name}
             />
             <input
               placeholder="Email"
               className="w-full outline outline-1 p-3"
+              onChange={(e) =>
+                setDataMessage({ ...dataMessage, email: e.target.value })
+              }
+              value={dataMessage.email}
             />
 
             <textarea
               placeholder="Tulis Pesanmu..."
               className="w-full outline outline-1 p-3 h-36 col-span-2"
+              onChange={(e) =>
+                setDataMessage({ ...dataMessage, message: e.target.value })
+              }
+              value={dataMessage.message}
             />
           </div>
 
           <div className="flex justify-between mt-5 w-full">
-            <button className="cursor-pointer">
+            <button className="cursor-pointer" onClick={handleSendEmail}>
               <div className="bg-black w-fit py-1 px-3 flex gap-2 z-10">
                 <img
                   src="/assets/mekar-kembang-01-white-2.svg"
-                  className="w-5"
+                  className={`w-5 ${loading && "animate-spin"}`}
                 />
                 <p className="text-white font-semibold">Kirim</p>
               </div>
@@ -57,7 +117,7 @@ function Section2() {
             <div className="flex gap-5 z-10">
               <button
                 onClick={() =>
-                  window.open('https://www.instagram.com/festivalfilmbogor/')
+                  window.open("https://www.instagram.com/festivalfilmbogor/")
                 }
               >
                 <div className="bg-[#DB4C4C] w-fit py-1 px-3 flex gap-2 z-10">
@@ -71,7 +131,7 @@ function Section2() {
               <button
                 onClick={() =>
                   window.open(
-                    'https://mail.google.com/mail/?view=cm&fs=1&to=festivalfilmbogor@gmail.com'
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=festivalfilmbogor@gmail.com"
                   )
                 }
               >

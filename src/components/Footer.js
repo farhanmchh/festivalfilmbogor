@@ -1,6 +1,6 @@
-import { Copyright, Instagram, Mail } from '@mui/icons-material';
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Copyright, Instagram, Mail } from "@mui/icons-material";
+import React from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Footer() {
   const location = useLocation();
@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="w-full">
       <div
         className={`${
-          location.pathname === '/kontak' ? 'hidden' : 'block'
+          location.pathname === "/kontak" ? "hidden" : "block"
         } bg-[#DB4C4C] relative py-14 z-0`}
       >
         <img
@@ -56,26 +56,26 @@ export default function Footer() {
           <div className="flex gap-10 sm:gap-20 mb-20">
             <img src="/assets/logo-white.svg" className="w-1/3 sm:w-1/4" />
             <div className="text-white w-1/2 sm:w-1/6 self-center">
-              <h3 style={{ lineHeight: '3rem' }}>
+              <h3 style={{ lineHeight: "3rem" }}>
                 15 - 17 Desember <span className="font-light">2023</span>
               </h3>
             </div>
           </div>
 
           <div className="text-white grid grid-cols-5  sm:gap-x-10 gap-y-5 sm:gap-y-0">
-            <a href="#" className="col-span-2 ">
+            <a href="/beranda" className="col-span-2 ">
               Beranda
             </a>
-            <a href="#" className="col-span-2 ">
+            <a href="/tentang" className="col-span-2 ">
               Tentang
             </a>
-            <a href="#" className="">
+            <a href="/program" className="">
               Program
             </a>
-            <a href="#" className="col-span-3 text-center ">
-              Arsip
+            <a href="/galeri" className="col-span-3 text-center ">
+              Galeri
             </a>
-            <a href="#" className="col-span-2 ">
+            <a href="/kontak" className="col-span-2 ">
               kontak
             </a>
           </div>
