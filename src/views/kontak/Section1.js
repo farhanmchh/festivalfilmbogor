@@ -1,27 +1,43 @@
-import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import React, { useState } from "react";
+import { ExpandLess, ExpandMore } from '@mui/icons-material';
+import React, { useState } from 'react';
 
 const initData = [
   {
     id: 1,
-    title: "Apa saja isi acara FFB 2023?",
-    open: 0,
-    content:
-      "FFB 2023 memiliki ragam acara yang disuguhkan untuk para sineas. Misal : Roadshow, Film Submission & Screening, Seminar, dan Awarding Night.",
+    title:
+      'Festival Film Bogor 2023 itu khusus untuk peserta daerah Bogor atau untuk umum?',
+    open: false,
+    contents: [
+      'Festival Film Bogor terbuka untuk umum ya, jadi seluruh filmmaker di Indonesia boleh ikutan!',
+    ],
   },
   {
     id: 2,
-    title: "Bagaimana cara submit film?",
-    open: 0,
-    content:
-      "FFB 2023 memiliki ragam acara yang disuguhkan untuk para sineas. Misal : Roadshow, Film Submission & Screening, Seminar, dan Awarding Night.",
+    title:
+      'Rangkaian acara Festival Film Bogor 2023 tuh ada apa aja sih kak? dan mulainya kapan?',
+    open: false,
+    contents: [
+      'Wah, banyak banget! rangkaian acara FFB 2023 dimulai dari roadshow bulanan "Road To FFB 2023" (Juli - November) yang terdiri dari program Layar Bogor (screening & discussion) dan workshop.',
+      'Informasi soal jadwal roadshow bisa pantengin Instagram kita ya! Nah, acara inti kita adalah tanggal 15,16 dan 17 Desember 2023.',
+      'Disana akan ada screening & discussion film-film official selection, seminar & workshop, art & stage performanse, showcase & awarding, dan masih banyak lagi!',
+    ],
   },
   {
     id: 3,
-    title: "Kapan & dimana FFB 2023?",
-    open: 0,
-    content:
-      "FFB 2023 memiliki ragam acara yang disuguhkan untuk para sineas. Misal : Roadshow, Film Submission & Screening, Seminar, dan Awarding Night.",
+    title:
+      'Pendaftaran Kompetisi umum itu untuk film daerah mana aja kak? pendaftarannya kapan?',
+    open: false,
+    contents: [
+      'Open Submission untuk sesi kompetisi dibuka mulai tanggal 2 Agustus sampai 2 November 2023, dan pastinya terbuka untuk seluruh filmmaker di Indonesia!',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Acaranya berbayar gak kak?',
+    open: false,
+    contents: [
+      'Seluruh rangkaian acara kita FREE! Jadi, mari ramaikan Festival Film Bogor 2023',
+    ],
   },
 ];
 
@@ -64,9 +80,7 @@ function Section1() {
             <div className="pb-8 flex justify-center">
               <div className="bg-white border-2 border-gray-500 w-[80%] sm:w-[70%] p-5 z-10">
                 <div className="justify-between flex">
-                  <p className="text-xl sm:text-3xl font-semibold">
-                    {each.title}
-                  </p>
+                  <p className="text-xl font-semibold">{each.title}</p>
                   {each.open ? (
                     <ExpandLess fontSize="large" />
                   ) : (
@@ -75,20 +89,24 @@ function Section1() {
                 </div>
 
                 {/* Content */}
-                {each.open ? (
-                  <p
-                    className="mt-8 text-md leading-loose"
-                    style={{
-                      animation: each.open
-                        ? "in-from-top 0.3s"
-                        : "out-to-top 0.3s",
-                    }}
-                  >
-                    {each.content}
-                  </p>
-                ) : (
-                  ""
-                )}
+                {each.contents.map((content) => {
+                  if (each.open) {
+                    return (
+                      <p
+                        className="mt-8 text-md leading-loose"
+                        style={{
+                          animation: each.open
+                            ? 'in-from-top 0.3s'
+                            : 'out-to-top 0.3s',
+                        }}
+                      >
+                        {content}
+                      </p>
+                    );
+                  } else {
+                    return '';
+                  }
+                })}
               </div>
             </div>
           </a>
