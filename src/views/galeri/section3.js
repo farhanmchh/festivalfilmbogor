@@ -141,7 +141,7 @@ export default function Section3() {
             <SwiperSlide className="md:w-[30%] mb-10">
               <img
                 src={merchandise.img}
-                className="border-2 border-black mb-3"
+                className="border-2 border-black mb-3 cursor-pointer"
                 onClick={() => setImagePreview(merchandise.img)}
               />
               <h5 className="text-white mb-3">

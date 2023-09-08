@@ -47,7 +47,7 @@ export default function Section1() {
               <SwiperSlide className="mb-7">
                 {content.images.map((image) => (
                   <div
-                    className="border-2 border-black mb-3"
+                    className="border-2 border-black mb-3 cursor-pointer"
                     onClick={() => setImagePreview(image)}
                   >
                     <img src={image} />

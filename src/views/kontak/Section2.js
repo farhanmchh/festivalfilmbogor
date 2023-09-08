@@ -123,7 +123,7 @@ function Section2() {
 
             <div className="flex justify-between mt-5 w-full">
               <button
-                className="bg-black w-fit py-1 px-4 flex gap-2 z-10"
+                className="bg-black w-fit py-1 px-4 flex gap-2 z-10 duration-300 hover:scale-105"
                 onClick={handleSendEmail}
               >
                 <img
@@ -135,6 +135,7 @@ function Section2() {
 
               <div className="flex gap-5 z-10">
                 <button
+                  className="duration-300 hover:scale-105"
                   onClick={() =>
                     window.open('https://www.instagram.com/festivalfilmbogor/')
                   }
@@ -148,6 +149,7 @@ function Section2() {
                 </button>
 
                 <button
+                  className="duration-300 hover:scale-105"
                   onClick={() =>
                     window.open(
                       'https://mail.google.com/mail/?view=cm&fs=1&to=festivalfilmbogor@gmail.com'

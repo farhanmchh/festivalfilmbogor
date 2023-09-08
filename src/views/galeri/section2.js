@@ -83,7 +83,6 @@ export default function Section2() {
                   <img
                     src={content.img}
                     className="w-full h-full object-cover"
-                    onClick={() => setImagePreview(content.img)}
                   />
                 </SwiperSlide>
               ))}
