@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/festivalfilmbogor/static/css/main.76ed0d79.css",
+    "main.js": "/festivalfilmbogor/static/js/main.8b4dc81b.js",
+    "static/js/575.96effcf1.chunk.js": "/festivalfilmbogor/static/js/575.96effcf1.chunk.js",
+    "static/js/787.b9adb50a.chunk.js": "/festivalfilmbogor/static/js/787.b9adb50a.chunk.js",
+    "static/js/517.f074d04b.chunk.js": "/festivalfilmbogor/static/js/517.f074d04b.chunk.js",
+    "static/js/964.aba9b6cc.chunk.js": "/festivalfilmbogor/static/js/964.aba9b6cc.chunk.js",
+    "static/js/774.e52dda38.chunk.js": "/festivalfilmbogor/static/js/774.e52dda38.chunk.js",
+    "static/js/884.e7af1c5e.chunk.js": "/festivalfilmbogor/static/js/884.e7af1c5e.chunk.js",
+    "static/js/646.dfbd0985.chunk.js": "/festivalfilmbogor/static/js/646.dfbd0985.chunk.js",
+    "static/css/858.c8176060.chunk.css": "/festivalfilmbogor/static/css/858.c8176060.chunk.css",
+    "static/js/858.e8fa2a36.chunk.js": "/festivalfilmbogor/static/js/858.e8fa2a36.chunk.js",
+    "static/js/160.4a025fc4.chunk.js": "/festivalfilmbogor/static/js/160.4a025fc4.chunk.js",
+    "static/js/104.14fa58a4.chunk.js": "/festivalfilmbogor/static/js/104.14fa58a4.chunk.js",
+    "static/js/905.75d93a83.chunk.js": "/festivalfilmbogor/static/js/905.75d93a83.chunk.js",
+    "static/js/244.a0bde57e.chunk.js": "/festivalfilmbogor/static/js/244.a0bde57e.chunk.js",
+    "index.html": "/festivalfilmbogor/index.html",
+    "main.76ed0d79.css.map": "/festivalfilmbogor/static/css/main.76ed0d79.css.map",
+    "main.8b4dc81b.js.map": "/festivalfilmbogor/static/js/main.8b4dc81b.js.map",
+    "575.96effcf1.chunk.js.map": "/festivalfilmbogor/static/js/575.96effcf1.chunk.js.map",
+    "787.b9adb50a.chunk.js.map": "/festivalfilmbogor/static/js/787.b9adb50a.chunk.js.map",
+    "517.f074d04b.chunk.js.map": "/festivalfilmbogor/static/js/517.f074d04b.chunk.js.map",
+    "964.aba9b6cc.chunk.js.map": "/festivalfilmbogor/static/js/964.aba9b6cc.chunk.js.map",
+    "774.e52dda38.chunk.js.map": "/festivalfilmbogor/static/js/774.e52dda38.chunk.js.map",
+    "884.e7af1c5e.chunk.js.map": "/festivalfilmbogor/static/js/884.e7af1c5e.chunk.js.map",
+    "646.dfbd0985.chunk.js.map": "/festivalfilmbogor/static/js/646.dfbd0985.chunk.js.map",
+    "858.c8176060.chunk.css.map": "/festivalfilmbogor/static/css/858.c8176060.chunk.css.map",
+    "858.e8fa2a36.chunk.js.map": "/festivalfilmbogor/static/js/858.e8fa2a36.chunk.js.map",
+    "160.4a025fc4.chunk.js.map": "/festivalfilmbogor/static/js/160.4a025fc4.chunk.js.map",
+    "104.14fa58a4.chunk.js.map": "/festivalfilmbogor/static/js/104.14fa58a4.chunk.js.map",
+    "905.75d93a83.chunk.js.map": "/festivalfilmbogor/static/js/905.75d93a83.chunk.js.map",
+    "244.a0bde57e.chunk.js.map": "/festivalfilmbogor/static/js/244.a0bde57e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76ed0d79.css",
+    "static/js/main.8b4dc81b.js"
+  ]
+}
